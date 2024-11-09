@@ -5,7 +5,4 @@ import javafx.scene.paint.Color;
 
 public interface Figure {
     void draw(GraphicsContext graphicsContext, double x, double y, Color color);
-
-    @Override
-    String toString();
 }

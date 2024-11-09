@@ -1,9 +1,11 @@
 package com.example.javafx;
 
 import geometry2d.*;
+import lombok.Data;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
+@Data
 public class DrawableFigure {
     private final Figure figure;
     private double x, y;
@@ -16,8 +18,8 @@ public class DrawableFigure {
         this.color = color;
     }
 
-    public void draw(GraphicsContext graphicsContext) {
-        figure.draw(graphicsContext, x, y, color);
+    public void draw(GraphicsContext gc) {
+        figure.draw(gc, x, y, color);
     }
 
     public boolean contains(double x, double y) {
@@ -32,23 +34,4 @@ public class DrawableFigure {
         return false;
     }
 
-    public void setX(double x) {
-        this.x = x;
-    }
-
-    public void setY(double y) {
-        this.y = y;
-    }
-
-    public double getX() {
-        return x;
-    }
-
-    public double getY() {
-        return y;
-    }
-
-    public void setColor(Color color) {
-        this.color = color;
-    }
 }

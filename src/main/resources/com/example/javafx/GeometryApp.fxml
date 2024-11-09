@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane fx:controller="com.example.javafx.GeometryAppController" xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <HBox spacing="10" alignment="center" >
+            <Button fx:id="circleButton" text="Нарисовать круг" onAction="#drawCircle"/>
+            <Button fx:id="rectangleButton" text="Нарисовать прямоугольник" onAction="#drawRectangle"/>
+        </HBox>
+    </top>
+    <center>
+        <Canvas fx:id="canvas" width="1024" height="768"/>
+    </center>
+</BorderPane>
